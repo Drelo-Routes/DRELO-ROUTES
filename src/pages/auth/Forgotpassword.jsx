@@ -1,70 +1,52 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { useNavigate } from "react-router"; 
 import { apiForgotPassword } from "../../services/auth";
 
 const Forgotpassword = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
 
     try {
-      const response = await apiForgotPassword({email});
-
-      // Simulate API request
-      setTimeout(() => {
-        setMessage("A password reset link has been sent to your email.");
-      }, 1000);
+      const response = await apiForgotPassword({ email });
       console.log(response);
+
+      setMessage("A password reset code has been sent to your email.");
+      
+      // ✅ Navigate to reset page after a short delay (optional)
+      setTimeout(() => navigate("/resetpassword"), 2000);
     } catch (error) {
-      setMessage("Failed to send reset link. Try again.");
-      console.log(error);
+      setMessage("Failed to send reset code. Try again.");
+      console.error(error);
     }
   };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[url(assets/pics/phone.jpg)] bg-cover">
-      <h2 className="text-lg font-bold text-white">
-        Enter Mail To Reset Your Password
-      </h2>
-      <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h2 className="text-lg font-bold mb-4">Reset Your Password</h2>
+      <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-sm">
         <input
           type="email"
-          placeholder="Enter your email"
           name="email"
+          placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="p-2 border rounded-md w-full"
+          className="w-full p-2 border rounded-md"
           required
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md"
+          className="w-full bg-blue-500 text-white py-2 rounded-md"
         >
-          Send Reset Link
-        </button>
-
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md ml-10"
-        >
-          <Link to="/resetpassword">Reset Password</Link>
+          Send Reset Code
         </button>
       </form>
-      {message && <p className="mt-2 text-green-300">{message}</p>}
+      {message && <p className="mt-4 text-green-600">{message}</p>}
     </div>
   );
-
-
-
-
-
-
-
-
-
-  
 };
 
 export default Forgotpassword
