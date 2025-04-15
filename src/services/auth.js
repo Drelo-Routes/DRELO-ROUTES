@@ -37,4 +37,8 @@ export const apiVerifyEmail = async (payload) => {
   return apiClient.post("/activate-email", payload);
 };
 
+export const apiGetWeather = async (city) => {
+  return apiClient.get(`/weather?city=${city}`);
+}
+
 // export const apiForgotPassword = (payload) => apiClient.post("users/forgot-password", payload);
