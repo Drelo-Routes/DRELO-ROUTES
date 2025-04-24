@@ -34,8 +34,8 @@ function App() {
         <Route path="/health" element = {<HealthSafetyResource />} />
         <Route path="/map" element={<MapPage />} />
         <Route path="/scams" element={<Scams />} />
-        <Route path="booking" element={<Booking />} />
-        <Route path="aichat" element={<AIBot />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/aichat" element={<AIBot />} />
         <Route path="/explore" element={<Explore />} />
 <Route path="/explore/:id" element={<ExploreDetail />} />
 
