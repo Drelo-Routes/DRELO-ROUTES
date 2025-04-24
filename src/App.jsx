@@ -35,6 +35,8 @@ function App() {
         <Route path="booking" element={<Booking />} />
         <Route path="aichat" element={<AIBot />} />
 
+
+
 <Route path="home" element={<Home />} />
         </Route>
       </Routes>
