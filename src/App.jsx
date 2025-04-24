@@ -9,6 +9,7 @@ import Forgotpassword from "./pages/auth/Forgotpassword";
 import Landing from "./components/Landing";
 import Home from "./pages/dashboard/home";
 import Weather from "./pages/user/Weather";
+import HealthSafetyResource from "./pages/user/HealthSafetyResource";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/resetpassword" element={<Resetpassword />} />
         <Route path="/forgotpassword" element={<Forgotpassword />}/>
         <Route path="/weather" element ={<Weather />} />
+        <Route path="/health" element = {<HealthSafetyResource />} />
 
 <Route path="home" element={<Home />} />
         </Route>
