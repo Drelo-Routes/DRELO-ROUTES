@@ -14,6 +14,8 @@ import MapPage from "./pages/user/MapPage";
 import Scams from "./pages/user/Scams";
 import Booking from "./pages/user/Booking";
 import AIBot from "./pages/user/AIBot";
+import Explore from "./pages/user/Explore";
+import ExploreDetail from "./pages/user/ExploreDetail";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
         <Route path="/scams" element={<Scams />} />
         <Route path="booking" element={<Booking />} />
         <Route path="aichat" element={<AIBot />} />
+        <Route path="/explore" element={<Explore />} />
+<Route path="/explore/:id" element={<ExploreDetail />} />
 
 
 
