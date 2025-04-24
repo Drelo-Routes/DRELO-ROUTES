@@ -9,6 +9,10 @@ import Forgotpassword from "./pages/auth/Forgotpassword";
 import Landing from "./components/Landing";
 import Home from "./pages/dashboard/home";
 import Weather from "./pages/user/Weather";
+import MapPage from "./pages/user/MapPage";
+import Scams from "./pages/user/Scams";
+import Booking from "./pages/user/Booking";
+import AIBot from "./pages/user/AIBot";
 
 function App() {
   return (
@@ -23,6 +27,11 @@ function App() {
         <Route path="/resetpassword" element={<Resetpassword />} />
         <Route path="/forgotpassword" element={<Forgotpassword />}/>
         <Route path="/weather" element ={<Weather />} />
+        <Route path="/map" element={<MapPage />} />
+        <Route path="/scams" element={<Scams />} />
+        <Route path="booking" element={<Booking />} />
+        <Route path="aichat" element={<AIBot />} />
+
 
 <Route path="home" element={<Home />} />
         </Route>

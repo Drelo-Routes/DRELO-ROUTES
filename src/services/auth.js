@@ -41,4 +41,9 @@ export const apiGetWeather = async (city) => {
   return apiClient.get(`/weather?city=${city}`);
 }
 
+export const apiChat = async (message) => {
+  return apiClient.post("/chat", { message });
+};
+
+
 // export const apiForgotPassword = (payload) => apiClient.post("users/forgot-password", payload);
