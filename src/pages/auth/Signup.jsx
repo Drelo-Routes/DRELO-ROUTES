@@ -20,7 +20,7 @@ const Signup = () => {
       console.log("Signup successful:", response);
       setEmail(data.email);
       setSuccessMessage("Signup successful! Please activate your account to log in.");
-      setTimeout(() => navigate(`/activateacc?email=${encodeURIComponent(data.email)}`), 3000);
+      setTimeout(() => navigate(`/activateacc?email=${encodeURIComponent(data.email)}`), 1000);
     } catch (error) {
       if (error.response?.status === 409) {
         alert("Email already registered. Try logging in.");
