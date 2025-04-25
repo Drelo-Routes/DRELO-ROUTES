@@ -43,10 +43,10 @@ const AIBot = () => {
             DreloBot <span role="img" aria-label="bot">🤖</span>
           </h2>
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className="text-sm text-blue-600 hover:underline"
           >
-            ← Back to Home
+            ← Back
           </button>
         </div>
 

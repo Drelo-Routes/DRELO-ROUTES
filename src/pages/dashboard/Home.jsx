@@ -58,27 +58,26 @@ const Home = () => {
             </div>
 
             {[ 
-              { label: "Map", icon: "📖", btn: "Check", pos: "top-[8%] left-1/2", link: "/map" },
+              { label: "Map", icon: "📖", btn: "Check", pos: "top-[12%] left-1/2", link: "/map" },
               { label: "Photos", icon: "📷", btn: "Snap", pos: "top-[20%] left-[76%]", link: "#" },
               { label: "Booking", icon: "📅", btn: "View", pos: "top-1/2 left-[90%]", link: "/booking" },
               { label: "Weather", icon: "⛅", btn: "Check", pos: "top-[76%] left-[76%]", link: "/weather" },
-              { label: "Health", icon: "💜", btn: "Learn", pos: "top-[90%] left-1/2", link: "/health" },
+              { label: "Health", icon: "💜", btn: "Learn", pos: "top-[84%] left-1/2", link: "/health" },
               { label: "Culture", icon: "🌐", btn: "Explore", pos: "top-[76%] left-[24%]", link: "#" },
               { label: "Scams", icon: "⚠️", btn: "Check", pos: "top-1/2 left-[10%]", link: "/scams" },
               { label: "Explore", icon: "🗺️", btn: "Go", pos: "top-[20%] left-[24%]", link: "/explore" },
             ].map((item, index) => (
-              <div
+              <Link
+                to={item.link}
                 key={index}
                 className={`absolute ${item.pos} transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1 z-30`}
               >
-                <div className="text-3xl md:text-4xl text-white">{item.icon}</div>
+                <div className="text-3xl md:text-4xl text-white hover:scale-110 transition">{item.icon}</div>
                 <div className="text-base md:text-lg font-semibold text-white">{item.label}</div>
-                <Link to={item.link}>
-                  <button className="text-sm md:text-base bg-white px-3 py-1 rounded shadow hover:bg-gray-200 transition">
-                    {item.btn}
-                  </button>
-                </Link>
-              </div>
+                <button className="text-sm md:text-base bg-white px-3 py-1 rounded shadow hover:bg-gray-200 transition">
+                  {item.btn}
+                </button>
+              </Link>
             ))}
           </div>
         </div>

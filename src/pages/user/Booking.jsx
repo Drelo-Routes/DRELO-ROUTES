@@ -3,7 +3,9 @@ import { FaHotel, FaCar, FaHiking, FaBullhorn } from 'react-icons/fa';
 
 // 🔳 Custom VendorCard Component
 const VendorCard = ({ name, description, phone, link, rating }) => (
+  
   <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col gap-1">
+    
     <div className="flex items-center justify-between">
       <h4 className="text-base font-semibold text-gray-800">{name}</h4>
       <div className="text-yellow-500 text-sm">
@@ -28,6 +30,7 @@ const VendorCard = ({ name, description, phone, link, rating }) => (
         </a>
       )}
     </div>
+    
   </div>
 );
 
@@ -365,10 +368,20 @@ const Booking = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-gradient-to-br from-white to-green-50 rounded-xl shadow-lg overflow-hidden border border-green-100">
-      <div className="bg-gradient-to-r from-green-600 to-lime-500 p-6">
+  <div className="min-h-screen bg-green-100 py-4 px-6">
+    {/* 🔵 Booking Card with Gradient Header */}
+    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-green-100">
+      <div className="bg-gradient-to-r from-green-600 to-lime-500 p-6 relative">
+        <button
+  onClick={() => navigate("/home")}
+  className="absolute right-4 top-4 sm:right-6 sm:top-5 text-white font-semibold hover:underline px-3 py-1 rounded"
+>
+  ← Back
+</button>
         <h2 className="text-3xl font-bold text-white">Booking Center</h2>
-        <p className="text-lime-100 mt-1 text-base">Explore and connect with trusted vendors in Ghana</p>
+        <p className="text-lime-100 mt-1 text-base">
+          Explore and connect with trusted vendors in Ghana
+        </p>
       </div>
 
       {/* Tabs */}
@@ -389,16 +402,19 @@ const Booking = () => {
         ))}
       </div>
 
-      {/* Content */}
-      <div className="p-6 bg-white">
-        {tabs[activeTab].content}
-      </div>
+      {/* Tab Content */}
+      <div className="p-6 bg-white">{tabs[activeTab].content}</div>
 
       <div className="bg-green-50 p-4 text-xs text-green-800 border-t border-green-100">
-        <p><strong>Note:</strong> Listings are curated or submitted by vendors. Always verify details before booking.</p>
+        <p>
+          <strong>Note:</strong> Listings are curated or submitted by vendors.
+          Always verify details before booking.
+        </p>
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default Booking;

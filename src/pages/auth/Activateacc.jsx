@@ -41,7 +41,8 @@ const Activateacc = () => {
       });
   
       console.log(response);
-      navigate("/login"); // Navigate after successful API call
+navigate("/home");
+
     } catch (error) {
       console.log(error); // Handle the error appropriately
     }
@@ -111,7 +112,7 @@ const Activateacc = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none"
+          className="w-full bg-green-700  hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none"
         >
           Verify
         </button>
