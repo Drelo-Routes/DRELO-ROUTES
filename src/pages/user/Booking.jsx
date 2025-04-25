@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaHotel, FaCar, FaHiking, FaBullhorn } from 'react-icons/fa';
+import { useNavigate } from "react-router";
 
 // 🔳 Custom VendorCard Component
 const VendorCard = ({ name, description, phone, link, rating }) => (
@@ -299,6 +300,7 @@ const AccommodationTab = () => {
 // 🔳 Main Booking Page
 const Booking = () => {
   const [activeTab, setActiveTab] = useState('accommodation');
+  const navigate = useNavigate();
 
   const tabs = {
     accommodation: {
