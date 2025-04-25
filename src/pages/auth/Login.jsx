@@ -1,44 +1,38 @@
+import React from "react";
 import { Link, useNavigate } from "react-router";
 import { apiLogin } from "../../services/auth";
 
 const Login = () => {
   const navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
     try {
       const response = await apiLogin(formData);
-      const { user } = response.data;
-      localStorage.setItem("token", response.data.accessToken); //fetch token from backend
-      localStorage.setItem("user", JSON.stringify(user.role));
+      const { accessToken } = response.data;
 
-      //nagigate user to their role
-      if (user.role === "vendor") {
-        navigate("/dashboard");
-      } else {
-        navigate("/adverts");
-      }
-      console.log(response);
+      localStorage.setItem("token", accessToken);
+      navigate("/home");
+      console.log("Login successful:", response);
     } catch (error) {
-      console.log(error);
+      console.log("Login failed:", error);
+      alert("Login failed. Please check your credentials.");
     }
   };
+
   return (
     <div className="relative w-full h-screen overflow-hidden">
-     
-
       <div className="absolute top-0 left-0 w-full h-full bg-[url(assets/images/kakum.avif)] bg-no-repeat bg-cover bg-center"></div>
 
       <div className="relative flex flex-col items-center justify-center h-full text-white">
         <div className="bg-green-950/70 backdrop-blur-md p-8 rounded-lg shadow-xl w-full max-w-md items-center relative border border-green-700/30">
           <h1 className="text-2xl font-semibold text-center mb-6 text-green-100">Log In</h1>
+
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-green-200"
-              >
+              <label htmlFor="email" className="block text-sm font-medium text-green-200">
                 Email
               </label>
               <input
@@ -52,10 +46,7 @@ const Login = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-green-200"
-              >
+              <label htmlFor="password" className="block text-sm font-medium text-green-200">
                 Password
               </label>
               <input
@@ -92,6 +83,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-

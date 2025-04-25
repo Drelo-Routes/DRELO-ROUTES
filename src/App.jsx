@@ -7,7 +7,7 @@ import Activateacc from "./pages/auth/Activateacc";
 import Resetpassword from "./pages/auth/Resetpassword";
 import Forgotpassword from "./pages/auth/Forgotpassword";
 import Landing from "./components/Landing";
-import Home from "./pages/dashboard/home";
+import Home from "./pages/dashboard/Home";
 import Weather from "./pages/user/Weather";
 import HealthSafetyResource from "./pages/user/HealthSafetyResource";
 import MapPage from "./pages/user/MapPage";

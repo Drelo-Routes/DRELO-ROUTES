@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { apiSignup } from "../../services/auth";
 
 const Signup = () => {
   const navigate = useNavigate();
-  
+  const [successMessage, setSuccessMessage] = useState("");
+  const [email, setEmail] = useState("");
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -12,12 +14,17 @@ const Signup = () => {
 
     try {
       const response = await apiSignup(data);
-      const { user } = response.data;
-      localStorage.setItem("user", JSON.stringify(user.role));
-      navigate("/login");
-      console.log(response);
+      console.log("Signup successful:", response);
+      setEmail(data.email);
+      setSuccessMessage("Signup successful! Please activate your account to log in.");
+      setTimeout(() => navigate(`/activateacc?email=${encodeURIComponent(data.email)}`), 3000);
     } catch (error) {
-      console.error(error);
+      if (error.response?.status === 409) {
+        alert("Email already registered. Try logging in.");
+      } else {
+        console.error("Signup failed:", error);
+        alert("Signup failed. Please try again.");
+      }
     }
   };
 
@@ -28,6 +35,16 @@ const Signup = () => {
       <div className="relative flex items-center justify-center h-full text-white">
         <div className="bg-green-950/70 backdrop-blur-md p-8 rounded-lg shadow-xl w-full max-w-md items-center relative border border-green-700/30">
           <h1 className="text-2xl font-semibold text-center mb-6 text-green-100">Sign Up</h1>
+
+          {successMessage && (
+            <div className="mb-4 p-3 bg-green-600 text-white rounded text-center text-sm">
+              {successMessage} <br />
+              <a href={`/activateacc?email=${encodeURIComponent(email)}`} className="underline text-white mt-1 inline-block">
+                Click here to activate now
+              </a>
+            </div>
+          )}
+
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-white">

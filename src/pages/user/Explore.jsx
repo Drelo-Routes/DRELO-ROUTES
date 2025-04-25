@@ -8,27 +8,27 @@ export const regions = [
     attractions: [
       { id: "manhyia-palace", name: "Manhyia Palace", description: "Historic seat of the Ashanti kingdom.", location: "Kumasi", image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Manhyia_Palace_Museum.jpg" },
       { id: "kumasi-zoo", name: "Kumasi Zoo", description: "Home to various wildlife species in the heart of Kumasi.", location: "Kumasi", image: "https://citinewsroom.com/wp-content/uploads/2021/02/Kumasi-Zoo.jpg" },
-      { id: "prempeh-museum", name: "Prempeh Museum", description: "Museum showcasing Ashanti culture and heritage.", location: "Kumasi", image: "/images/prempeh.jpg" },
-      { id: "lake-bosomtwe", name: "Lake Bosomtwe", description: "Sacred lake formed by a meteorite impact.", location: "Bosomtwe", image: "/images/lake-bosomtwe.jpg" },
-      { id: "rattray-park", name: "Rattray Park", description: "Urban park with modern amenities in Kumasi.", location: "Kumasi", image: "/images/rattray.jpg" },
-      { id: "owabi-wildlife", name: "Owabi Wildlife Sanctuary", description: "Sanctuary known for bird watching and biodiversity.", location: "Kumasi", image: "/images/owabi.jpg" },
-      { id: "kejetia-market", name: "Kejetia Market", description: "One of West Africa's largest open-air markets.", location: "Kumasi", image: "/images/kejetia.jpg" },
+      { id: "prempeh-museum", name: "Prempeh Museum", description: "Museum showcasing Ashanti culture and heritage.", location: "Kumasi", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQADFAKPruAuvUB8L_I7oV4-zDdJgEZT3EeQ&s" },
+      { id: "lake-bosomtwe", name: "Lake Bosomtwe", description: "Sacred lake formed by a meteorite impact.", location: "Bosomtwe", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP9rd9W5Nj4S4QKK5zENfjN6UgX9JmGBJXZg&s" },
+      { id: "rattray-park", name: "Rattray Park", description: "Urban park with modern amenities in Kumasi.", location: "Kumasi", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/11/32/7a/img-20200923-170112-largejpg.jpg?w=900&h=500&s=1" },
+      { id: "owabi-wildlife", name: "Owabi Wildlife Sanctuary", description: "Sanctuary known for bird watching and biodiversity.", location: "Kumasi", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR83EwQFQcYRRMCdTZTCIQkHqD7qxowMfJHdw&s" },
+      { id: "okomfo-anokye-sword-site", name: "Okomfo Anokye Sword Site", description: "One of West Africa's largest open-air markets.", location: "Kumasi", image: "https://viewghana.com/wp-content/uploads/2025/02/Okomfo-Anokye-Sword-Site3.jpg" },
       { id: "asantehene-palace", name: "Asantehene Palace", description: "The ceremonial residence of the Ashanti king.", location: "Kumasi", image: "/images/asantehene.jpg" },
-      { id: "cultural-center", name: "Kumasi Cultural Centre", description: "Center for traditional crafts and performances.", location: "Kumasi", image: "/images/cultural-center.jpg" },
-      { id: "adum-kumasi", name: "Adum District", description: "Vibrant commercial hub of Kumasi.", location: "Kumasi", image: "/images/adum.jpg" },
+      { id: "cultural-center", name: "Kumasi Cultural Centre", description: "Center for traditional crafts and performances.", location: "Kumasi", image: "https://media-cdn.tripadvisor.com/media/daodao/photo-s/01/a8/e7/13/culture-centre-kumasi.jpg" },
+      
     ]
   },
   {
     name: "Volta Region",
     attractions: [
-      { id: "wli-falls", name: "Wli Waterfalls", description: "Tallest waterfall in Ghana.", location: "Hohoe", image: "/images/wli.jpg" },
-      { id: "mount-afadjato", name: "Mount Afadjato", description: "Ghana's highest peak for hiking lovers.", location: "Hohoe", image: "/images/afadjato.jpg" },
-      { id: "tagbo-falls", name: "Tagbo Falls", description: "Beautiful natural waterfall near Liati Wote.", location: "Liati Wote", image: "/images/tagbo.jpg" },
+      { id: "wli-falls", name: "Wli Waterfalls", description: "Tallest waterfall in Ghana.", location: "Hohoe", image: "https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/813b87962a8010d0aeffe3aeaac04d40a1ac2dd8ff8533d863b1df291cb1208f.jpg" },
+      { id: "mount-afadjato", name: "Mount Afadjato", description: "Ghana's highest peak for hiking lovers.", location: "Hohoe", image: "https://visitghana.com/wp-content/uploads/2019/02/2703_Afadjato.jpg" },
+      { id: "tagbo-falls", name: "Tagbo Falls", description: "Beautiful natural waterfall near Liati Wote.", location: "Liati Wote", image: "https://ghanaremembers.com/storage/public/tagbo-falls.jpg" },
       { id: "tsiame-pottery", name: "Tsiame Pottery Village", description: "Village known for traditional pottery making.", location: "Tsiame", image: "/images/tsiame.jpg" },
-      { id: "kpetoe-kente", name: "Kpetoe Kente Weaving", description: "Center for traditional kente weaving.", location: "Kpetoe", image: "/images/kpetoe.jpg" },
-      { id: "akyode-heritage", name: "Akyode Heritage Site", description: "Cultural site of the Akyode people.", location: "Nkwanta", image: "/images/akyode.jpg" },
-      { id: "ve-wildlife", name: "Ve Wildlife Corridor", description: "Conservation area for migratory animals.", location: "Ve", image: "/images/ve.jpg" },
-      { id: "likpe-caves", name: "Likpe Caves", description: "Series of ancestral caves with guided hikes.", location: "Likpe", image: "/images/likpe.jpg" },
+      { id: "kpetoe-kente", name: "Kpetoe Kente Weaving", description: "Center for traditional kente weaving.", location: "Kpetoe", image: "https://visitghana.com/wp-content/uploads/2019/02/4010_1452594059437.jpeg" },
+      { id: "akyode-heritage", name: "Akyode Heritage Site", description: "Cultural site of the Akyode people.", location: "Nkwanta", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7ruxKAIL5Z8PngUjZBkrdwaG79kSURhzuyA&s" },
+    
+      { id: "likpe-caves", name: "Likpe Caves", description: "Series of ancestral caves with guided hikes.", location: "Likpe", image: "https://ghanaremembers.com/images/http/aHR0cHM6Ly9naGFuYXJlbWVtYmVycy5jb20vc3RvcmFnZS9wdWJsaWMvbGlrcGUtY2F2ZXMtYW5kLXdhdGVyZmFsbHMucG5n/likpe-caves-and-waterfalls.png?p=page_featured&s=3a8665ce5b68a08d21c46e880ce02032" },
       { id: "amekpor-hill", name: "Amekpor Hill", description: "Hilltop view of Volta landscapes.", location: "Kpeve", image: "/images/amekpor.jpg" },
       { id: "volta-lake", name: "Volta Lake", description: "One of the world’s largest man-made lakes.", location: "Akosombo", image: "/images/volta-lake.jpg" },
     ]
