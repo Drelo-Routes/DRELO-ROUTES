@@ -36,26 +36,31 @@ const AIBot = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 flex justify-center items-center p-6">
-      <div className="w-full max-w-2xl bg-white/90 backdrop-blur rounded-xl shadow-xl p-6 flex flex-col justify-between h-[90vh]">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-100 flex justify-center items-center p-4 sm:p-6">
+      <div className="w-full max-w-3xl bg-white/90 backdrop-blur rounded-xl shadow-xl p-6 flex flex-col justify-between h-[90vh]">
+        
+        {/* 🔙 Header with Responsive Back Button */}
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold text-purple-800">
+          <h2 className="text-xl sm:text-2xl font-bold text-purple-800">
             DreloBot <span role="img" aria-label="bot">🤖</span>
           </h2>
           <button
             onClick={() => navigate("/home")}
-            className="text-sm text-blue-600 hover:underline"
+            className="text-sm text-purple-700 font-bold hover:underline"
           >
             ← Back
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto space-y-4 mb-4 pr-1">
+        {/* 💬 Message Box */}
+        <div className="flex-1 overflow-y-auto space-y-4 mb-4 pr-1 scrollbar-thin scrollbar-thumb-purple-200">
           {messages.map((msg, idx) => (
             <div
               key={idx}
-              className={`p-3 whitespace-pre-line rounded-lg max-w-xl shadow-sm ${
-                msg.sender === "user" ? "bg-purple-100 ml-auto text-right" : "bg-gray-100 mr-auto text-left"
+              className={`p-3 whitespace-pre-line rounded-lg max-w-sm sm:max-w-md md:max-w-xl shadow-sm ${
+                msg.sender === "user"
+                  ? "bg-purple-100 ml-auto text-right"
+                  : "bg-gray-100 mr-auto text-left"
               }`}
             >
               {msg.text}
@@ -68,7 +73,8 @@ const AIBot = () => {
           )}
         </div>
 
-        <div className="flex gap-3 items-center mt-2">
+        {/* ✍️ Input Section */}
+        <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center mt-2">
           <input
             type="text"
             value={input}
@@ -80,8 +86,10 @@ const AIBot = () => {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className={`px-6 py-2 rounded-lg text-white shadow-md transition ${
-              loading ? "bg-purple-400" : "bg-purple-600 hover:bg-purple-700"
+            className={`w-full sm:w-auto px-6 py-2 rounded-lg text-white shadow-md transition ${
+              loading
+                ? "bg-purple-400"
+                : "bg-purple-600 hover:bg-purple-700"
             }`}
           >
             {loading ? "Sending..." : "Send"}

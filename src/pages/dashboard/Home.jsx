@@ -63,7 +63,7 @@ const Home = () => {
               { label: "Booking", icon: "📅", btn: "View", pos: "top-1/2 left-[90%]", link: "/booking" },
               { label: "Weather", icon: "⛅", btn: "Check", pos: "top-[76%] left-[76%]", link: "/weather" },
               { label: "Health", icon: "💜", btn: "Learn", pos: "top-[84%] left-1/2", link: "/health" },
-              { label: "Culture", icon: "🌐", btn: "Explore", pos: "top-[76%] left-[24%]", link: "#" },
+              { label: "Culture", icon: "🌐", btn: "Explore", pos: "top-[76%] left-[24%]", link: "/culture" },
               { label: "Scams", icon: "⚠️", btn: "Check", pos: "top-1/2 left-[10%]", link: "/scams" },
               { label: "Explore", icon: "🗺️", btn: "Go", pos: "top-[20%] left-[24%]", link: "/explore" },
             ].map((item, index) => (

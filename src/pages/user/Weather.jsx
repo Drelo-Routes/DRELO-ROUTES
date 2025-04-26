@@ -1,12 +1,14 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
+import { useNavigate } from "react-router"; 
 import { apiGetWeather } from "../../services/auth";
-import cloud from "../../assets/images/cloud.mp4"
+import cloud from "../../assets/images/cloud.mp4";
 
 const Weather = () => {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // ✅ Added
 
   const handleSearch = async () => {
     if (!city.trim()) return;
@@ -55,8 +57,7 @@ const Weather = () => {
     const temps = forecast.map(f => f.temperature);
 
     const mostCommon = descriptions.sort((a, b) =>
-      descriptions.filter(v => v === a).length -
-      descriptions.filter(v => v === b).length
+      descriptions.filter(v => v === a).length - descriptions.filter(v => v === b).length
     ).pop();
 
     const minTemp = Math.min(...temps);
@@ -88,6 +89,7 @@ const Weather = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 relative">
+      {/* Background Video */}
       <video
         autoPlay
         muted
@@ -97,8 +99,21 @@ const Weather = () => {
       >
         <source src={cloud} type="video/mp4" />
       </video>
-      <div className="bg-white bg-opacity-90 text-black w-full max-w-2xl min-h-[80vh] rounded-xl shadow-md p-6 overflow-auto">
 
+      {/* Main Card */}
+      <div className="bg-white bg-opacity-90 text-black w-full max-w-2xl min-h-[80vh] rounded-xl shadow-md p-6 overflow-auto relative">
+        
+       
+        <div className="flex justify-end mb-4">
+          <button
+            onClick={() => navigate("/home")}
+            className="text-sm text-purple-600 font-semibold hover:underline"
+          >
+            ← Back 
+          </button>
+        </div>
+
+        {/* Search Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
           <input
             type="text"
@@ -117,6 +132,7 @@ const Weather = () => {
           </button>
         </div>
 
+        {/* Weather Data Display */}
         {displayData && (
           <>
             <div className="text-center mb-6">
@@ -137,6 +153,7 @@ const Weather = () => {
               </div>
             </div>
 
+            {/* Forecast */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-center">
               {displayData.forecast.map((item, index) => (
                 <div key={index} className="bg-transparent">
@@ -154,18 +171,14 @@ const Weather = () => {
               ))}
             </div>
 
+            {/* Forecast Summary */}
             <p className="text-center text-gray-800 mt-6 italic">
               {generateForecastSummary(displayData.forecast)}
             </p>
-
-            <div className="mt-6 text-center">
-              <button className="text-blue-600 hover:underline font-semibold">
-                ← Back to Home
-              </button>
-            </div>
           </>
         )}
 
+        {/* Error Message */}
         {error && (
           <p className="text-red-500 text-center mt-4">{error}</p>
         )}

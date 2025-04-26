@@ -16,6 +16,7 @@ import Booking from "./pages/user/Booking";
 import AIBot from "./pages/user/AIBot";
 import Explore from "./pages/user/Explore";
 import ExploreDetail from "./pages/user/ExploreDetail";
+import Culture from "./pages/user/Culture";
 
 function App() {
   return (
@@ -37,7 +38,9 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/aichat" element={<AIBot />} />
         <Route path="/explore" element={<Explore />} />
-<Route path="/explore/:id" element={<ExploreDetail />} />
+        <Route path="/explore/:id" element={<ExploreDetail />} />
+        <Route path="/culture" element={<Culture />} />
+
 
 
 

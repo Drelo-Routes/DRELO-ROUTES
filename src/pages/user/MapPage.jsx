@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router';
 import {
   MapContainer,
   TileLayer,
@@ -13,6 +14,8 @@ import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import L from 'leaflet';
 import 'leaflet-routing-machine';
+
+import mapVideo from '../../assets/images/map.mp4'; // ✅ Import the video
 
 // 🔍 Search Bar
 const SearchControl = ({ setDestination }) => {
@@ -89,6 +92,7 @@ const MapPage = () => {
   const [userLocation, setUserLocation] = useState(null);
   const [destination, setDestination] = useState(null);
   const [routeSummary, setRouteSummary] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -102,10 +106,35 @@ const MapPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 p-6 flex items-center justify-center">
-      <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-6 space-y-6">
-        <h2 className="text-xl font-bold text-gray-800">🗺️ Explore Ghana</h2>
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* 🔴 Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      >
+        <source src={mapVideo} type="video/mp4" />
+      </video>
 
+      {/* 🔵 Content Card */}
+      <div className="w-full max-w-4xl bg-white bg-opacity-90 rounded-lg shadow-lg p-6 space-y-6 relative z-10">
+        
+        {/* 🔙 Top Bar With Gradient */}
+        <div className="flex justify-between items-center px-4 py-3 mb-6 rounded-md bg-[#3694A2] backdrop-blur-sm shadow-sm">
+          <h2 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+            🗺️ <span>Explore Ghana</span>
+          </h2>
+          <button
+            onClick={() => navigate("/home")}
+            className="text-sm text-white font-semibold hover:underline"
+          >
+            ← Back
+          </button>
+        </div>
+
+        {/* Route Summary */}
         {routeSummary && (
           <div className="bg-gray-100 p-4 rounded text-sm">
             <h3 className="font-semibold text-gray-700 mb-1">📍 Route Summary</h3>
@@ -114,6 +143,7 @@ const MapPage = () => {
           </div>
         )}
 
+        {/* Map Section */}
         <div className="rounded overflow-hidden border border-gray-300">
           {userLocation && (
             <MapContainer
