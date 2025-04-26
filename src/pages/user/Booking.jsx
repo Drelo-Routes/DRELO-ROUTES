@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaHotel, FaCar, FaHiking, FaBullhorn } from 'react-icons/fa';
 import { useNavigate } from "react-router";
-import bgImage from '../../assets/images/kente.jpg'; // ✅ you can swap this later
+import bgImage from '../../assets/images/new.png'; // ✅ you can swap this later
 
 // 🔳 Custom VendorCard Component
 const VendorCard = ({ name, description, phone, link, rating }) => (

@@ -178,7 +178,7 @@ export const regions = [
       descriptionShort: "Historic castle central to the transatlantic slave trade.",
       descriptionFull: "Cape Coast Castle is one of the most significant historical sites related to the transatlantic slave trade. Built by European traders, the castle served as a major holding site for enslaved Africans before being shipped overseas. Tours of the dungeons and museum offer sobering insights into this dark chapter of human history.",
       location: "Cape Coast",
-      image: "/images/cape-coast.jpg"
+      image: "https://momaa.org/wp-content/uploads/2019/10/Cape-Coast-Castle-Museum.png"
     },
     {
       id: "elmina-castle",
@@ -186,7 +186,7 @@ export const regions = [
       descriptionShort: "Oldest European building in sub-Saharan Africa.",
       descriptionFull: "Built by the Portuguese in 1482, Elmina Castle is the oldest European structure in sub-Saharan Africa. Like Cape Coast Castle, it served as a hub for the slave trade. Visitors can explore its dungeons, chapels, and towers while learning about Ghana’s colonial past.",
       location: "Elmina",
-      image: "/images/elmina.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmm5FxHW7kTWsdfhdEtDlNFhEfTmlluB9RRQ&s"
     },
     {
       id: "kakum-park",
@@ -194,7 +194,7 @@ export const regions = [
       descriptionShort: "Famous rainforest canopy walk adventure.",
       descriptionFull: "Kakum National Park is one of Ghana’s premier natural parks, featuring a unique canopy walkway suspended high above the forest floor. The park also hosts diverse wildlife including forest elephants and exotic bird species. Guided nature tours provide educational experiences about the rainforest ecosystem.",
       location: "Cape Coast",
-      image: "/images/kakum.jpg"
+      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/91/86/09/caption.jpg?w=1200&h=1200&s=1"
     },
     {
       id: "fort-amsterdam",
@@ -202,15 +202,7 @@ export const regions = [
       descriptionShort: "Dutch colonial fort overlooking the Gulf of Guinea.",
       descriptionFull: "Fort Amsterdam was built by the English and later captured by the Dutch in the 17th century. Located in Abandze, this fort played a major role in the gold and slave trades. Its ruins offer a haunting glimpse into Ghana’s colonial past and beautiful views of the coastline.",
       location: "Abandze",
-      image: "/images/fort.jpg"
-    },
-    {
-      id: "botanicals",
-      name: "Cape Coast Botanical Gardens",
-      descriptionShort: "Peaceful gardens for nature lovers and families.",
-      descriptionFull: "The Cape Coast Botanical Gardens provide a serene retreat filled with a variety of tropical plants and flowers. It’s a beautiful place for family picnics, leisurely strolls, and educational tours about Ghana's indigenous flora.",
-      location: "Cape Coast",
-      image: "/images/botanical.jpg"
+      image: "https://i.ytimg.com/vi/IHYB5FaHlOU/maxresdefault.jpg"
     },
     {
       id: "mankessim-shrine",
@@ -218,40 +210,42 @@ export const regions = [
       descriptionShort: "Spiritual site revered by the Fante people.",
       descriptionFull: "The Mankessim Shrine, known locally as Nananom Mpow, is considered the ancestral shrine of the Fante people. It holds deep cultural and spiritual significance and is an important site for traditional rituals and celebrations.",
       location: "Mankessim",
-      image: "/images/mankessim.jpg"
+      image: "https://static.wixstatic.com/media/101c1b_7d662e04a7b845aea0788da509529912~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/101c1b_7d662e04a7b845aea0788da509529912~mv2.jpg"
     },
-    {
-      id: "ansasamba-market",
-      name: "Ansanba Market",
-      descriptionShort: "Bustling local market near the coast.",
-      descriptionFull: "Ansanba Market (near Cape Coast) is a lively trading hub where you can experience daily Ghanaian life. Fresh produce, textiles, seafood, and handicrafts fill the colorful stalls, giving visitors an authentic market experience.",
-      location: "Cape Coast",
-      image: "/images/anasanba.jpg"
-    },
-    {
-      id: "chiefs-palace",
-      name: "Chief’s Palace - Elmina",
-      descriptionShort: "Historic residence of Elmina's traditional rulers.",
-      descriptionFull: "The Chief’s Palace in Elmina is an important cultural landmark reflecting traditional governance systems. Visitors can learn about the roles of chiefs in Ghanaian society and the palace's architectural significance.",
-      location: "Elmina",
-      image: "/images/chief.jpg"
-    },
+    
     {
       id: "slave-river",
       name: "Slave River (Assin Manso)",
       descriptionShort: "Memorial site where slaves bathed before sale.",
       descriptionFull: "Slave River, or Nnonkonsuo, at Assin Manso, served as a final bathing point for captured Africans before being taken to coastal castles. Today, the site serves as a memorial where visitors can reflect on the journey and resilience of enslaved ancestors.",
       location: "Assin Manso",
-      image: "/images/slave-river.jpg"
+      image: "https://cdn.getyourguide.com/img/tour/649ff14d00fd6.jpeg/99.jpg"
     },
     {
-      id: "brimsu-dam",
-      name: "Brimsu Dam",
-      descriptionShort: "Reservoir supplying water to Cape Coast.",
-      descriptionFull: "Brimsu Dam is a critical infrastructure facility providing potable water to Cape Coast and surrounding areas. The scenic area around the dam also offers quiet views and nature exploration opportunities.",
-      location: "Cape Coast",
-      image: "/images/brimsu.jpg"
-    }
+  id: "fort-william",
+  name: "Fort William (Anomabo Fort)",
+  descriptionShort: "Historic British fort involved in the slave trade.",
+  descriptionFull: "Fort William, also known as Anomabo Fort, is one of the significant British forts along Ghana's coastline, heavily involved in the transatlantic slave trade. Today, it stands as a preserved monument where visitors can explore its dark dungeons, historical artifacts, and learn about its role during colonial times.",
+  location: "Anomabo",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHuM-VBjCKknYQghny6CrYzbpqd6hWT2IP0jHaxn4CXhbVvFvitnLHpt9Pc7NNbSOPD54&usqp=CAU" 
+    },
+{
+  id: "hans-cottage-botel",
+  name: "Hans Cottage Botel",
+  descriptionShort: "Eco-lodge with crocodile ponds and nature trails.",
+  descriptionFull: "Hans Cottage Botel is a unique eco-lodge built around a natural crocodile pond, offering guests a one-of-a-kind experience to dine, relax, and observe crocodiles up close. It serves as a serene stop for visitors exploring Cape Coast and Kakum National Park.",
+  location: "Cape Coast",
+  image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/135742571.jpg?k=7e8449e29a4220068860f60f70a0939121c7336e8ddf342e1f808940f36c8f23&o=&hp=1"
+},
+{
+  id: "brenu-beach",
+  name: "Brenu Beach",
+  descriptionShort: "Pristine, quiet beach ideal for relaxation.",
+  descriptionFull: "Brenu Beach is regarded as one of Ghana’s cleanest and most beautiful beaches. Located near Elmina and Cape Coast, it offers soft golden sands, safe swimming areas, and a tranquil atmosphere, making it perfect for tourists looking to relax after exploring historical sites.",
+  location: "Elmina/Cape Coast",
+  image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/a1/55/8f/brenu-beach-lodge.jpg?w=500&h=-1&s=1"
+}
+
   ]
 }
 
