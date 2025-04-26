@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { regions } from './Explore'; // Shared regions data
-import bg from '../../assets/images/road.png'; // Background image
+import bg from '../../assets/images/kente.jpg'; // Background image
 
 const ExploreDetail = () => {
   const { id } = useParams();

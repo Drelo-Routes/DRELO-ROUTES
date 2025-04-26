@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
-import waterfall from "../../assets/images/waterfall.jpg"; // ✅ Background image
+import waterfall from "../../assets/images/kente.jpg"; // ✅ Background image
 
 export const regions = [
   {
@@ -64,16 +64,30 @@ export const regions = [
   {
    name: "Northern Region",
     attractions: [
-      { id: "mole-park", name: "Mole National Park", descriptionShort: "Ghana’s largest wildlife reserve.", descriptionFull: "Mole National Park is Ghana’s largest and most prestigious protected area. Located in the Savannah Region, it is home to elephants, antelopes, baboons, and over 90 species of mammals, as well as abundant birdlife. Visitors can embark on guided walking safaris and vehicle safaris for up-close wildlife experiences.", location: "Damongo", image: "/images/mole.jpg" },
-      { id: "larabanga-mosque", name: "Larabanga Mosque", descriptionShort: "Oldest mosque in Ghana.", descriptionFull: "The Larabanga Mosque is one of the oldest mosques in West Africa, built in the Sudanese architectural style. It holds historical and spiritual significance and is a key tourist attraction in the Northern Region.", location: "Larabanga", image: "/images/larabanga.jpg" },
-      { id: "yendi-palace", name: "Yendi Palace", descriptionShort: "Seat of the Dagbon traditional council.", descriptionFull: "The Yendi Palace, home to the Yaa Naa (King of Dagbon), is an important traditional seat in Ghana. It serves as the cultural and political center for the Dagbon Kingdom.", location: "Yendi", image: "/images/yendi.jpg" },
-      { id: "nalerigu-wall", name: "Nalerigu Defense Wall", descriptionShort: "Ancient defensive structure.", descriptionFull: "Built in the 16th century, the Nalerigu Defense Wall served as a protective structure for the inhabitants against slave raiders. It remains a historical monument and an important cultural relic.", location: "Nalerigu", image: "/images/nalerigu.jpg" },
-      { id: "tamale-cultural", name: "Tamale Cultural Centre", descriptionShort: "Showcase of Northern culture and art.", descriptionFull: "The Tamale Cultural Centre preserves and promotes the arts and culture of Northern Ghana. Visitors can explore exhibitions of crafts, traditional dance performances, and artisan workshops.", location: "Tamale", image: "/images/tamale-cultural.jpg" },
-      { id: "salaga-slave-market", name: "Salaga Slave Market", descriptionShort: "Historic slave trade market site.", descriptionFull: "Salaga was a major slave market town during the trans-Saharan trade era. Visitors to the Salaga Slave Market learn about the town’s historical significance and its role in the slave trade.", location: "Salaga", image: "/images/salaga.jpg" },
-      { id: "damba-festival", name: "Damba Festival", descriptionShort: "Traditional festival celebrated in Tamale.", descriptionFull: "The Damba Festival is one of the most important traditional festivals in Northern Ghana. Celebrated by the Dagomba people, it features colorful drumming, dancing, horse riding, and storytelling events.", location: "Tamale", image: "/images/damba.jpg" },
-      { id: "bui-dam", name: "Bui Dam", descriptionShort: "Major hydroelectric dam.", descriptionFull: "The Bui Dam, located on the Black Volta River, is Ghana's second-largest hydroelectric dam. Apart from its role in electricity generation, the dam area offers scenic views and supports wildlife conservation activities.", location: "Bole", image: "/images/bui.jpg" },
-      { id: "tamale-stadium", name: "Aliu Mahama Sports Stadium", descriptionShort: "Main stadium in Northern Ghana.", descriptionFull: "The Aliu Mahama Sports Stadium is a multi-purpose facility primarily used for football matches. It hosted matches during the 2008 African Cup of Nations and serves as a sporting hub in the Northern Region.", location: "Tamale", image: "/images/stadium.jpg" },
-      { id: "zongo-market", name: "Tamale Zongo Market", descriptionShort: "Bustling market in Tamale.", descriptionFull: "The Zongo Market in Tamale is one of the liveliest and busiest marketplaces in the region. It offers a glimpse into daily life, commerce, and vibrant community interactions in Northern Ghana.", location: "Tamale", image: "/images/zongo.jpg" }
+      { id: "mole-park", name: "Mole National Park", descriptionShort: "Ghana’s largest wildlife reserve.", descriptionFull: "Mole National Park is Ghana’s largest and most prestigious protected area. Located in the Savannah Region, it is home to elephants, antelopes, baboons, and over 90 species of mammals, as well as abundant birdlife. Visitors can embark on guided walking safaris and vehicle safaris for up-close wildlife experiences.", location: "Damongo", image: "https://worldbank.scene7.com/is/image/worldbankprod/ghana-mole-national-park-v3?wid=780&hei=439&qlt=85,0&resMode=sharp" },
+      { id: "larabanga-mosque", name: "Larabanga Mosque", descriptionShort: "Oldest mosque in Ghana.", descriptionFull: "The Larabanga Mosque is one of the oldest mosques in West Africa, built in the Sudanese architectural style. It holds historical and spiritual significance and is a key tourist attraction in the Northern Region.", location: "Larabanga", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFqwSlfpAZI6e49p3rFK-Q4oA1kZqMuKqmDw&s" },
+      { id: "yendi-palace", name: "Yendi Palace", descriptionShort: "Seat of the Dagbon traditional council.", descriptionFull: "The Yendi Palace, home to the Yaa Naa (King of Dagbon), is an important traditional seat in Ghana. It serves as the cultural and political center for the Dagbon Kingdom.", location: "Yendi", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gbewaa_palace_in_Yendi.jpg/1024px-Gbewaa_palace_in_Yendi.jpg" },
+      { id: "nalerigu-wall", name: "Nalerigu Defense Wall", descriptionShort: "Ancient defensive structure.", descriptionFull: "Built in the 16th century, the Nalerigu Defense Wall served as a protective structure for the inhabitants against slave raiders. It remains a historical monument and an important cultural relic.", location: "Nalerigu", image: "https://wp-haunsinafrica.s3.amazonaws.com/wp-content/uploads/sites/10/2019/05/17162651/20160430-whaun-nalerigu-najeringa-defense-wall-north-east-region-ghana-0818-1920x1280.jpg" },
+      { id: "tamale-cultural", name: "Tamale Cultural Centre", descriptionShort: "Showcase of Northern culture and art.", descriptionFull: "The Tamale Cultural Centre preserves and promotes the arts and culture of Northern Ghana. Visitors can explore exhibitions of crafts, traditional dance performances, and artisan workshops.", location: "Tamale", image: "https://ghanaremembers.com/storage/public/tamale-central-market.jpg" },
+      { id: "salaga-slave-market", name: "Salaga Slave Market", descriptionShort: "Historic slave trade market site.", descriptionFull: "Salaga was a major slave market town during the trans-Saharan trade era. Visitors to the Salaga Slave Market learn about the town’s historical significance and its role in the slave trade.", location: "Salaga", image: "https://cdn.ghanaweb.com/imagelib/pics/400/40030498.jpg" },
+      {
+  id: "sakpuli-wells",
+  name: "Sakpuli Slave Wells",
+  descriptionShort: "Historical slave trade wells.",
+  descriptionFull: "Located near Yendi, the Sakpuli Slave Wells are an important historical reminder of the trans-Saharan slave trade routes. These ancient wells provided water for caravans and slaves during their long journeys across West Africa. Today, the site stands as a silent testimony to Ghana's complex history, attracting visitors interested in cultural heritage and history.",
+  location: "Near Yendi",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtg4Hnkc1tlmR-bB0GEEYd7wuaLIzbN_xAQ&s"
+}
+,
+      
+      {
+  id: "mognori-eco-village",
+  name: "Mognori Eco Village",
+  descriptionShort: "Community-based eco-tourism village.",
+  descriptionFull: "Mognori Eco Village, located just outside Mole National Park, offers a true taste of rural Ghanaian life. Guests experience traditional drumming, dances, canoe safaris, and learn about local herbal medicine. It's a unique opportunity to engage with the community while supporting sustainable tourism initiatives.",
+  location: "Near Mole Park",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGj5Nn81UJIGpsyAp1r3dy27u882moYobF6Q&s"
+},
     ]
   },
   
@@ -86,7 +100,7 @@ export const regions = [
       descriptionShort: "Final resting place of Ghana's first president.",
       descriptionFull: "The Kwame Nkrumah Memorial Park is a national monument dedicated to Ghana’s first president. It contains his mausoleum, museum artifacts, and stands as a tribute to Ghana’s independence movement.",
       location: "Accra",
-      image: "/images/kwame.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_tCpOANjOPQ8WlqxnL8uX3elfoaPeagR3w&s"
     },
     {
       id: "independence-arch",
@@ -94,7 +108,7 @@ export const regions = [
       descriptionShort: "Symbol of Ghana's freedom at Black Star Square.",
       descriptionFull: "Independence Arch at Black Star Square is a powerful national symbol of Ghana’s emancipation from colonial rule. It is one of the largest public squares in the world and hosts national parades and events.",
       location: "Accra",
-      image: "/images/independence-arch.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4BLDk-118zLRWa3KXgD9hbC8VmQCIvtruYg&s"
     },
     {
       id: "arts-centre",
@@ -102,7 +116,7 @@ export const regions = [
       descriptionShort: "Best place to buy authentic Ghanaian art and crafts.",
       descriptionFull: "The Arts Centre in Accra is a bustling marketplace where local artisans sell crafts, paintings, fabrics, carvings, and jewelry. It’s the perfect place to experience authentic Ghanaian creativity.",
       location: "Accra",
-      image: "/images/arts-centre.jpg"
+      image: "https://media.timeout.com/images/100674197/image.jpg"
     },
     {
       id: "labadi-beach",
@@ -110,7 +124,7 @@ export const regions = [
       descriptionShort: "Vibrant city beach with live music and horseback rides.",
       descriptionFull: "Labadi Beach is one of Accra’s most popular beaches, known for its energetic vibe with drumming, dancing, acrobatics, and food vendors. It’s especially lively on weekends and holidays.",
       location: "Accra",
-      image: "/images/labadi.jpg"
+      image: "https://beta-planet.gvi.co.uk/wp-content/uploads/2023/04/1848482284-2023-apr-14-16-19-41-000000-ghana-beach-with-white-fluffy-clouds-blue-sky-and-2022-11-11-06-21-10-utc.jpg"
     },
     {
       id: "shai-hills",
@@ -118,15 +132,7 @@ export const regions = [
       descriptionShort: "Wildlife reserve and hiking trails near Accra.",
       descriptionFull: "Shai Hills is a combination of savannah plains and rocky hills where visitors can see baboons, antelopes, and ostriches. It’s perfect for nature walks, rock climbing, and learning about the Shai people's heritage.",
       location: "Shai Hills",
-      image: "/images/shai.jpg"
-    },
-    {
-      id: "aburi-botanical-gardens",
-      name: "Aburi Botanical Gardens",
-      descriptionShort: "Lush gardens for relaxation and picnics.",
-      descriptionFull: "Established in 1890, Aburi Botanical Gardens offer a serene escape from Accra’s bustle. The gardens feature exotic plants, palm-lined avenues, and beautiful landscapes ideal for family outings and photoshoots.",
-      location: "Aburi",
-      image: "/images/aburi.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw96vT4yCDzEq9DbqEGpnFQpC1cblb4JQrCw&s"
     },
     {
       id: "w.e.b-dubois-centre",
@@ -134,7 +140,7 @@ export const regions = [
       descriptionShort: "Museum honoring African-American scholar W.E.B. Du Bois.",
       descriptionFull: "The W.E.B. Du Bois Centre preserves the memory of the Pan-Africanist scholar and civil rights leader who made Ghana his home. It houses his mausoleum, personal library, and historical exhibits.",
       location: "Accra",
-      image: "/images/dubois.jpg"
+      image: "https://www.museumnext.com/wp-content/uploads/2021/09/DU-BOIS-MUSEUM-copy.png"
     },
     {
       id: "legon-botanical-gardens",
@@ -142,7 +148,7 @@ export const regions = [
       descriptionShort: "Adventure park with canopy walk and boat rides.",
       descriptionFull: "Legon Botanical Gardens is a hidden gem offering nature trails, canopy walkways, playgrounds, kayaking, and rope obstacle courses. It’s perfect for families and adventure seekers in Accra.",
       location: "Legon",
-      image: "/images/legon.jpg"
+      image: "https://i0.wp.com/circumspecte.com/wp-content/uploads/2017/04/IMG_3036-1.jpg?fit=900%2C600&ssl=1"
     },
     {
       id: "osu-castle",
@@ -150,7 +156,7 @@ export const regions = [
       descriptionShort: "Historic colonial-era castle.",
       descriptionFull: "Osu Castle, built by the Danes in the 1660s, served as the seat of government during the colonial era and after independence. It remains a site of significant political and historical importance.",
       location: "Accra",
-      image: "/images/osu.jpg"
+      image: "https://madinghana.wordpress.com/wp-content/uploads/2013/04/osu-castle.jpg?w=640"
     },
     {
       id: "bojo-beach",
@@ -158,7 +164,7 @@ export const regions = [
       descriptionShort: "Beautiful private beach ideal for swimming and relaxation.",
       descriptionFull: "Bojo Beach offers a clean, scenic beachfront separated from the mainland by a lagoon. Visitors enjoy canoe rides across the water to the sandy beach and experience a quieter, more peaceful beach atmosphere compared to city beaches.",
       location: "Bortianor",
-      image: "/images/bojo.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTWTGpXu8o7_D801ok9FUNLe0aVQKBcVLY3Q&s"
     }
   ]
 }

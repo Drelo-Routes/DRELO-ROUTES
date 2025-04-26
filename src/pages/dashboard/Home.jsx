@@ -59,7 +59,7 @@ const Home = () => {
 
             {[ 
               { label: "Map", icon: "📖", btn: "Check", pos: "top-[12%] left-1/2", link: "/map" },
-              { label: "Photos", icon: "📷", btn: "Snap", pos: "top-[20%] left-[76%]", link: "#" },
+              { label: "Photos", icon: "📷", btn: "View", pos: "top-[20%] left-[76%]", link: "/photos" },
               { label: "Booking", icon: "📅", btn: "View", pos: "top-1/2 left-[90%]", link: "/booking" },
               { label: "Weather", icon: "⛅", btn: "Check", pos: "top-[76%] left-[76%]", link: "/weather" },
               { label: "Health", icon: "💜", btn: "Learn", pos: "top-[84%] left-1/2", link: "/health" },
