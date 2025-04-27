@@ -17,10 +17,10 @@ const cultureTabs = {
     content: (
       <CultureCard title="Ghanaian Etiquette" color="green">
         <ul className="list-disc pl-5 space-y-2 text-sm">
-          <li>👋 Always greet people when you enter a room or meet someone—it’s big here.</li>
+          <li>👋 Always greet people when you enter a room or meet someone, it’s big here.</li>
           <li>🫱 Use your right hand when giving or receiving items. Left hand = rude.</li>
           <li>🙏 Avoid public confrontation. Respect is a huge cultural pillar.</li>
-          <li>👣 Don’t point at people with your fingers—gesture with your whole hand.</li>
+          <li>👣 Don’t point at people with your fingers, gesture with your whole hand.</li>
         </ul>
       </CultureCard>
     )
@@ -32,7 +32,7 @@ const cultureTabs = {
       <CultureCard title="Common Ghanaian Slangs" color="yellow">
         <ul className="list-disc pl-5 space-y-2 text-sm">
           <li>“Chale” – Friend or buddy (you’ll hear this everywhere!)</li>
-          <li>“Abi” – Right?/Isn’t it? (used for confirmation)</li>
+          <li>“Toli” – Lie?/Isn’t it? (used to depict lies)</li>
           <li>“Troski” – Local shared minibus transport.</li>
           <li>“Wahala” – Trouble/problem. (“No wahala” = no problem.)</li>
         </ul>
@@ -45,7 +45,7 @@ const cultureTabs = {
     content: (
       <CultureCard title="Tasty Treats in Ghana" color="red">
         <ul className="list-disc pl-5 space-y-2 text-sm">
-          <li>Jollof Rice 🍚🔥 – A spicy tomato-based rice dish. Fierce rivalry with Nigeria.</li>
+          <li>Jollof Rice 🍚 – A spicy tomato-based rice dish. Fierce rivalry with Nigeria.</li>
           <li>Kelewele 🍌🌶️ – Fried spicy plantain cubes, often sold by street vendors.</li>
           <li>Waakye 🫘🍖 – A breakfast fave made of rice and beans, usually with meat and spaghetti.</li>
           <li>Chinchinga 🍢 – Ghanaian kebabs. Spicy and smoky, absolute street gold.</li>
@@ -59,10 +59,10 @@ const cultureTabs = {
     content: (
       <CultureCard title="Ghanaian Lifestyle" color="blue">
         <ul className="list-disc pl-5 space-y-2 text-sm">
-          <li>🕰️ Things move at their own pace. “Ghana Man Time” is real—be flexible.</li>
+          <li>🕰️ Things move at their own pace. “Ghana Man Time” is real, be flexible.</li>
           <li>🎶 Music and dance are deeply rooted. Highlife, Azonto, and Afrobeat rule the airwaves.</li>
           <li>👪 Community and family are everything. Don’t be surprised by how close-knit people are.</li>
-          <li>🛐 Religion is part of everyday life—expect to see churches and hear gospel music a lot.</li>
+          <li>🛐 Religion is part of everyday life, expect to see churches and hear gospel music a lot.</li>
         </ul>
       </CultureCard>
     )

@@ -124,7 +124,7 @@ const SexualHealthContent = () => (
     </CardSection>
 
     <InfoAlert color="yellow">
-      Alcohol and substances may impair judgment — stay protected at all times.
+      Alcohol and substances may impair judgment ,  stay protected at all times.
     </InfoAlert>
   </div>
 );
