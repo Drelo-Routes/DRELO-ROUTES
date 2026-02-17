@@ -70,16 +70,21 @@ const Landing = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/20"></div>
 
           <div className="absolute top-4 right-4 flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 z-20">
-            <Link to="/login">
+            {/* <Link to="/login">
               <button className="text-white font-medium text-sm sm:text-lg hover:text-yellow-300 transition px-3 py-2">
                 Login
               </button>
-            </Link>
-            <Link to="/signup">
+            </Link> */}
+            {/* <Link to="/signup">
               <button className="bg-white/10 backdrop-blur-sm text-white font-medium text-sm sm:text-lg hover:bg-white/20 transition px-4 py-2 rounded-full border border-white/30">
                 Signup
               </button>
-            </Link>
+            </Link> */}
+            {/* { <Link to="/home">
+              <button className="text-white font-medium text-sm sm:text-lg hover:text-yellow-300 transition px-3 py-2">
+                Get Started
+              </button>
+            </Link> } */}
           </div>
 
           <div className="absolute top-2 left-1/2 transform -translate-x-1/2 z-20">
@@ -107,7 +112,7 @@ const Landing = () => {
 
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
                 <button 
-  onClick={() => navigate("/signup")}
+  onClick={() => navigate("/home")}
   className="bg-yellow-500 text-black font-semibold text-sm sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 transform hover:-translate-y-1"
 >
   Get Started

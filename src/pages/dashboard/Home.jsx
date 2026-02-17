@@ -40,6 +40,7 @@ const Home = () => {
               <p><strong>Drelo Compass:</strong> Click the icons around the compass to access travel tools like maps, weather, and booking. Click the center to talk to DreLoBot for help anytime.</p>
             </div>
           )}
+          
         </div>
 
         {/* Compass Interface */}
